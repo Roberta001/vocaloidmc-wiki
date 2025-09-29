@@ -1,0 +1,17 @@
+# 依赖文件夹
+node_modules/
+
+# 构建输出目录
+dist/
+.vitepress/dist/
+.vitepress/cache/
+
+# 环境变量文件
+.env
+.env.local
+
+# IDE 和系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
