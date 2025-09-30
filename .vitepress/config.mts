@@ -8,7 +8,7 @@ export default defineConfig({
 
   // 头部 <head> 标签
   head: [
-    ['link', { rel: 'icon', href: 'http://p.qlogo.cn/gh/731192205/731192205/0' }] // 请在 docs/public 目录下放置一个 favicon.ico
+    ['link', { rel: 'icon', href: 'http://p.qlogo.cn/gh/731192205/731192205/0' }]
   ],
 
   // 主题配置
@@ -19,16 +19,19 @@ export default defineConfig({
     // 导航栏 (顶部)
     nav: [
       { text: '首页', link: '/' },
-      { text: '如何加入服务器', link: '/guide/join' },
-      { text: '服务器特色', link: '/features/music-scoreboard' },
+      { text: '如何加入', link: '/guide/join' },
       {
-        text: '高级功能',
+        text: '服务器 Wiki',
         items: [
-          { text: '投稿与称号定制', link: '/advanced/minimessage' },
-          { text: '地图画制作', link: '/advanced/mapify' },
-          { text: 'MiniMessage 基础语法', link: '/advanced/minimessage-basics' },
+          { text: '怪物 Wiki', link: '/wiki/mobs/oushi' }, // 修改链接到第一个怪物
+          { text: 'NPC Wiki', link: '/wiki/npcs/soul-forger' },
+          { text: 'Boss Wiki', link: '/wiki/bosses/dead-master' },
+          { text: '物品 Wiki', link: '/wiki/items/diamond-sword' }
         ]
       },
+      { text: '小游戏介绍', link: '/minigames/bedwars' },
+      { text: '指令帮助', link: '/commands/basic' },
+      { text: '特别玩法', link: '/gameplay/custom-enchanting' }
     ],
 
     // 侧边栏
@@ -41,22 +44,78 @@ export default defineConfig({
           ]
         }
       ],
-      '/features/': [
+      // 为新增的 Wiki 设计侧边栏
+      '/wiki/': [
         {
-          text: '服务器特色',
+          text: '怪物 Wiki',
+          // collapsible: true, // 如果条目太多，可以开启折叠
+          // collapsed: false,
           items: [
-            { text: '点歌功能', link: '/features/music-scoreboard#点歌功能' },
-            { text: '计分板开关', link: '/features/music-scoreboard#计分板开关' }
+            // 在这里列出你的所有怪物
+            { text: '积木人偶 (OuShi)', link: '/wiki/mobs/oushi' },
+            { text: '筒尸 (TongShi)', link: '/wiki/mobs/tongshi' },
+            { text: '儒尸 (RuShi)', link: '/wiki/mobs/rushi' },
+            { text: '舞蹈尸骸 (DancingSkeleton)', link: '/wiki/mobs/dancingskeleton' },
+            { text: '姬蛛 (PrincessSpider)', link: '/wiki/mobs/princessspider' },
+            { text: '恶意程序 (Malware)', link: '/wiki/mobs/malware' },
+            { text: '海绵人 (SpongeMan)', link: '/wiki/mobs/spongeman' },
+            { text: '悲しみの溺者 (SorrowDrowned)', link: '/wiki/mobs/sorrowdrowned' },
+            { text: '机械海豚 (AutoMatonDolphin)', link: '/wiki/mobs/automatondolphin' },
+          ]
+        },
+        {
+          text: 'NPC Wiki',
+          items: [
+            // 更新为新的NPC链接
+            { text: '灵魂锻造者', link: '/wiki/npcs/soul-forger' },
+            { text: '晶体锻造者', link: '/wiki/npcs/crystal-forger' },
+            { text: '拾荒者', link: '/wiki/npcs/waste-picker' },
+            { text: '虚弱的骷髅', link: '/wiki/npcs/weak-skeleton' },
+            { text: '医生', link: '/wiki/npcs/doctor' },
+          ]
+        },
+        {
+          text: 'Boss Wiki',
+          items: [
+            { text: '死亡主宰 (Dead Master)', link: '/wiki/bosses/dead-master' },
+          ]
+        },
+        {
+          text: '物品 Wiki',
+          items: [
+            { text: '旋风之剑 (Breeze Sword)', link: '/wiki/items/breeze-sword' },
+            { text: '风暴战锤 (Storm Hammer)', link: '/wiki/items/storm-hammer' },
           ]
         }
       ],
-      '/advanced/': [
+      // 小游戏侧边栏
+      '/minigames/': [
         {
-          text: '自定义与高级功能',
+          text: '服务器小游戏',
           items: [
-            { text: '投稿与称号定制', link: '/advanced/minimessage' },
-            { text: '地图画制作', link: '/advanced/mapify' },
-            { text: 'MiniMessage 基础语法', link: '/advanced/minimessage-basics' },
+            { text: '起床战争', link: '/minigames/bedwars' },
+            { text: 'TNT 跑酷', link: '/minigames/tnt-run' },
+          ]
+        }
+      ],
+      // 指令侧边栏
+      '/commands/': [
+        {
+          text: '指令帮助',
+          items: [
+            { text: '基础指令', link: '/commands/basic' },
+            { text: '领地指令', link: '/commands/residence' },
+            { text: '经济指令', link: '/commands/economy' },
+          ]
+        }
+      ],
+      // 特别玩法侧边栏
+      '/gameplay/': [
+        {
+          text: '特别玩法',
+          items: [
+            { text: '自定义附魔', link: '/gameplay/custom-enchanting' },
+            { text: '公会系统', link: '/gameplay/guilds' },
           ]
         }
       ],
