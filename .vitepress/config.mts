@@ -73,6 +73,10 @@ export default defineConfig({
             { text: '拾荒者', link: '/wiki/npcs/waste-picker' },
             { text: '虚弱的骷髅', link: '/wiki/npcs/weak-skeleton' },
             { text: '医生', link: '/wiki/npcs/doctor' },
+            { text: '试炼密室代理人', link: '/wiki/npcs/FengZongZhe' },
+            { text: '奥利维亚船长', link: '/wiki/npcs/captain-olivia' },
+            { text: '海洋学家', link: '/wiki/npcs/oceanographer' },
+            { text: '不再拾荒的拾荒者', link: '/wiki/npcs/reformed-scavenger' },
           ]
         },
         {
