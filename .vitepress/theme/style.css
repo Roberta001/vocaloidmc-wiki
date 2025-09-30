@@ -1,0 +1,59 @@
+/* .vitepress/theme/style.css */
+
+/* 署名区的总容器 */
+.vp-doc .signature {
+  text-align: right; /* 将内部所有元素右对齐 */
+  
+  /* 视觉优化：向上移动一点，离引用更近 */
+  margin-top: -1em; 
+  
+  /* 视觉优化：给下方留出一些空间 */
+  margin-bottom: 2em; 
+}
+
+/* 作者行的样式 */
+.vp-doc .signature .author {
+  font-style: italic;
+  font-weight: bold;
+  color: #555;
+  line-height: 1.5; /* 增加行高，避免与下一行挤在一起 */
+}
+
+/* 来源小字的样式 (新增) */
+.vp-doc .signature .source {
+  font-size: 0.85em;  /* 字体设置得更小 */
+  color: #999;       /* 颜色设置得更淡 */
+  font-style: italic;
+}
+
+.vp-doc .divider {
+  display: flex;          /* 启用 Flexbox 布局 */
+  align-items: center;    /* 垂直居中（文字和线条）*/
+  text-align: center;     /* 文本居中 */
+
+  /* 样式化中间的文字 */
+  font-size: 0.9em;       /* 小字号 */
+  color: #b0b0b0;         /* 柔和的灰色 */
+  letter-spacing: 0.1em;  /* 增加一点字母间距，提升设计感 */
+
+  /* 上下留出足够的空间 */
+  margin: 0.5rem 0;
+}
+
+/* 创建左侧和右侧的线条 */
+.vp-doc .divider::before,
+.vp-doc .divider::after {
+  content: '';          /* 伪元素必须有 content 属性 */
+  flex-grow: 1;           /* 核心：让线条占据所有剩余空间 */
+  height: 1px;            /* 线条的高度（粗细）*/
+  background-color: #e0e0e0; /* 线条的颜色，比文字更浅 */
+}
+
+/* 给线条和文字之间增加一点间距 */
+.vp-doc .divider::before {
+  margin-right: 1em;
+}
+
+.vp-doc .divider::after {
+  margin-left: 1em;
+}
