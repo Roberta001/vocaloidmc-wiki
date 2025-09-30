@@ -61,6 +61,7 @@ export default defineConfig({
             { text: '海绵人 (SpongeMan)', link: '/wiki/mobs/spongeman' },
             { text: '悲しみの溺者 (SorrowDrowned)', link: '/wiki/mobs/sorrowdrowned' },
             { text: '机械海豚 (AutoMatonDolphin)', link: '/wiki/mobs/automatondolphin' },
+            { text: '尸潮 (Hordes)', link: '/wiki/mobs/hordes' },
           ]
         },
         {
